@@ -6,7 +6,7 @@ describe ('Expectancy', () => {
     let region = "Americas";
     let gender = "female";
     let alcohol = "barely";
-    let exercise = "yes";
+    let exercise = "no";
     expectancyTest = new Expectancy(region, gender, alcohol, exercise);
   })
 
@@ -29,7 +29,7 @@ describe ('Expectancy', () => {
     expectancyTest.regionCal();
     expectancyTest.genderCal();
     expectancyTest.alcoholCal();
-    expect(expectancyTest.exerciseCal()).toEqual(100)
+    expect(expectancyTest.exerciseCal()).toEqual(92)
   });
 
 
