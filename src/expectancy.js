@@ -1,8 +1,8 @@
 export default class Expectancy {
-  constructor(region, gender) {
+  constructor(region, gender, alcohol) {
   this.region = region;
   this.gender = gender;
-  // this.alcohol = alcohol;
+  this.alcohol = alcohol;
   // this.exercise = exercise;
   this.ageExpectancy = 0;
   }
@@ -27,6 +27,18 @@ export default class Expectancy {
   genderCal() {
     if (this.gender === "female") {
       this.ageExpectancy += 5;
+      return this.ageExpectancy;
+    } else {
+      return this.ageExpectancy;
+    }
+  }
+
+  alcoholCal() {
+    if (this.alcohol === "barely" ) {
+      this.ageExpectancy += 8;
+      return this.ageExpectancy;
+    } else if (this.alcohol === 'occasion') {
+      this.ageExpectancy += 4;
       return this.ageExpectancy;
     } else {
       return this.ageExpectancy;
