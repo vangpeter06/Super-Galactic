@@ -77,9 +77,9 @@ describe ('Expectancy', () => {
   });
 
   test('should return life expectancy based on user input for alcohol use', ()=> {
-  let region = "Americas"
-  let gender = "male";
-  let alcohol = "occasion";
+    let region = "Americas"
+    let gender = "male";
+    let alcohol = "occasion";
   expectancyTest = new Expectancy(region, gender, alcohol);
   expectancyTest.regionCal();
   expectancyTest.genderCal();
@@ -87,9 +87,9 @@ describe ('Expectancy', () => {
   });
 
   test('should return life expectancy based on user input for alcohol use', ()=> {
-  let region = "Americas"
-  let gender = "male";
-  let alcohol = "always";
+    let region = "Americas"
+    let gender = "male";
+    let alcohol = "always";
   expectancyTest = new Expectancy(region, gender, alcohol);
   expectancyTest.regionCal();
   expectancyTest.genderCal();
@@ -97,14 +97,14 @@ describe ('Expectancy', () => {
   });
 
   test('should return life expectancy based on user input for exercising', ()=> {
-  let region = "Americas"
-  let gender = "male";
-  let alcohol = "always";
-  let exercise = "no";
+    let region = "Americas"
+    let gender = "male";
+    let alcohol = "always";
+    let exercise = "yes";
   expectancyTest = new Expectancy(region, gender, alcohol, exercise);
   expectancyTest.regionCal();
   expectancyTest.genderCal();
   expectancyTest.alcoholCal();
-  expect(expectancyTest.exerciseCal()).toEqual(79)
+  expect(expectancyTest.exerciseCal()).toEqual(87)
   });
 });

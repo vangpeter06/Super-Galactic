@@ -1,10 +1,10 @@
 export default class Expectancy {
   constructor(region, gender, alcohol, exercise) {
-  this.region = region;
-  this.gender = gender;
-  this.alcohol = alcohol;
-  this.exercise = exercise;
-  this.ageExpectancy = 0;
+    this.region = region;
+    this.gender = gender;
+    this.alcohol = alcohol;
+    this.exercise = exercise;
+    this.ageExpectancy = 0;
   }
 
   regionCal() {
