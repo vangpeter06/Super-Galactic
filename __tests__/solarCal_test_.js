@@ -3,9 +3,9 @@ import SolarCal from "../src/solarCal.js"
 describe ('SolarCal', () => {
 let newTest;
 beforeEach(() => {
-  let age = 34;
-  newTest = new SolarCal(age)
+  let age = 84;
   let expectancy = 77;
+  newTest = new SolarCal(age, expectancy)
 });
 
 test("should return the age of Earth years", () => {
@@ -30,7 +30,11 @@ test("should return the age of Jupiter years", () => {
 });
 
 test("should return the age years left to live", () => {
-  expect(newTest.expectancy()).toEqual(43);
+  expect(newTest.expectancyCal()).toEqual(43);
+});
+
+test("should return number years past lives life expectancy if current age exceeds average life expectancy", () => {
+  expect(newTest.yearsExpectancy()).toEqual("You have lived 7 years beyond average life expectancy");
 });
 
 });
