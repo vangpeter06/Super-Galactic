@@ -1,6 +1,7 @@
 export default class SolarCal {
-  constructor(age) {
+  constructor(age, expectancy) {
   this.age = age;
+  this.expectancy = expectancy;
   };
 
   earthCal() {
@@ -26,5 +27,10 @@ export default class SolarCal {
   jupiterCal() {
     let jupiterAge = Math.round(this.age * 11.86)
     return jupiterAge;
+  };
+
+  expectancyCal() {
+    let expectancyAge = Math.round(this.expectancy - this.age)
+    return expectancyAge;
   };
 };
