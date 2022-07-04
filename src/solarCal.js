@@ -23,4 +23,8 @@ export default class SolarCal {
     return marsAge;
   };
 
+  jupiterCal() {
+    let jupiterAge = Math.round(this.age * 11.86)
+    return jupiterAge;
+  };
 };
