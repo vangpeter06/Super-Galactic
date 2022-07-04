@@ -21,9 +21,12 @@ test("should return the age of Venus years", () => {
 });
 
 test("should return the age of Mars years", () => {
-  expect(newTest.marsCal()).toEqual(21);
+  expect(newTest.marsCal()).toEqual(64);
 });
 
+test("should return the age of Jupiter years", () => {
+  expect(newTest.jupiterCal()).toEqual(403);
+});
 
 
 
