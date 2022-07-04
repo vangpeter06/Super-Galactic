@@ -18,4 +18,9 @@ export default class SolarCal {
     return venusAge;
   };
 
+  marsCal() {
+    let marsAge = Math.round(this.age * 1.88)
+    return marsAge;
+  };
+
 };
