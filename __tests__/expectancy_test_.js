@@ -73,4 +73,24 @@ describe ('Expectancy', () => {
   expectancyTest.regionCal();
   expect(expectancyTest.genderCal()).toEqual(79)
 });
+
+test('should return life expectancy based on user input for alcohol use', ()=> {
+  let region = "Americas"
+  let gender = "male";
+  let alcohol = "occasion";
+    expectancyTest = new Expectancy(region, gender, alcohol);
+  expectancyTest.regionCal();
+  expectancyTest.genderCal();
+  expect(expectancyTest.alcoholCal()).toEqual(83)
+});
+
+test('should return life expectancy based on user input for alcohol use', ()=> {
+  let region = "Americas"
+  let gender = "male";
+  let alcohol = "always";
+    expectancyTest = new Expectancy(region, gender, alcohol);
+  expectancyTest.regionCal();
+  expectancyTest.genderCal();
+  expect(expectancyTest.alcoholCal()).toEqual(79)
+});
 });
