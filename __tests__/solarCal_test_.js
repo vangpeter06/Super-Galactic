@@ -5,6 +5,7 @@ let newTest;
 beforeEach(() => {
   let age = 34;
   newTest = new SolarCal(age)
+  let expectancy = 77;
 });
 
 test("should return the age of Earth years", () => {
@@ -28,6 +29,8 @@ test("should return the age of Jupiter years", () => {
   expect(newTest.jupiterCal()).toEqual(403);
 });
 
-
+test("should return the age years left to live", () => {
+  expect(newTest.expectancy()).toEqual(43);
+});
 
 });
