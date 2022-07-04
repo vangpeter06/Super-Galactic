@@ -38,7 +38,11 @@ export default class SolarCal {
     if (this.age > this.expectancy) {
       let yearsAge = Math.round(this.age - this.expectancy )
     return (`You have lived ${yearsAge} years beyond average life expectancy`) ;
-    } else {
-    }  
+    } else if (this.age === this.expectancy) {
+      return (`You have reach the life expectancy on earth`)
+    }  else {
+      let expectancyAge = Math.round(this.expectancy - this.age)
+      return (`You have ${expectancyAge} years left to reach the average life expectancy`)
+    }
     };
 };
