@@ -39,3 +39,21 @@ test("should return number years past lives life expectancy if current age excee
 });
 });
 
+describe ('SolarCal', () => {
+  let newTest;
+  test("should return number years past lives life expectancy if current age exceeds average life expectancy and years you lived beyond", () => {
+    let age = 88;
+    let expectancy = 77;
+    newTest = new SolarCal(age, expectancy)
+    expect(newTest.yearsYouLived()).toEqual(`You have lived 11 years beyond average life expectancy`);
+  });
+
+  test("should return number years past lives life expectancy if current age exceeds average life expectancy and years you lived beyond", () => {
+    let age = 77;
+    let expectancy = 77;
+    newTest = new SolarCal(age, expectancy)
+    expect(newTest.yearsYouLived()).toEqual(`You have reach the life expectancy on earth`);
+  });
+    
+})
+
