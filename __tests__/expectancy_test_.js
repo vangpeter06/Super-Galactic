@@ -35,7 +35,37 @@ describe ('Expectancy', () => {
 describe ('Expectancy', () => {
   let expectancyTest;
   
-  test('should return life expectancy based on user input for exercising', ()=> {
+  test('should return life expectancy based on user input for region', ()=> {
+    let region = "Asia";
+    expectancyTest = new Expectancy(region)
+    expect(expectancyTest.regionCal()).toEqual(80)
+  });
+
+  test('should return life expectancy based on user input for region', ()=> {
+    let region = "Africa";
+    expectancyTest = new Expectancy(region)
+    expect(expectancyTest.regionCal()).toEqual(74)
+  });
+  
+  test('should return life expectancy based on user input for region', ()=> {
+    let region = "Europe";
+    expectancyTest = new Expectancy(region)
+    expect(expectancyTest.regionCal()).toEqual(77)
+  });
+
+  test('should return life expectancy based on user input for region', ()=> {
+    let region = "South Americas";
+    expectancyTest = new Expectancy(region)
+    expect(expectancyTest.regionCal()).toEqual(76)
+  });
+
+  test('should return life expectancy based on user input for region', ()=> {
+    let region = "neither";
+    expectancyTest = new Expectancy(region)
+    expect(expectancyTest.regionCal()).toEqual(71)
+  });
+  
+  test('should return life expectancy based on user input for gender', ()=> {
     
     let region = "Americas"
     let gender = "male";
