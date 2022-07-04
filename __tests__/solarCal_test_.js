@@ -1,5 +1,5 @@
 import SolarCal from "../src/solarCal.js"
-import Expectancy from "../src/expectancy"
+
 
 describe ('SolarCal', () => {
 let newTest;
@@ -39,14 +39,3 @@ test("should return number years past lives life expectancy if current age excee
 });
 });
 
-describe ('Expectancy', () => {
-  let expectancyTest;
-  beforeEach(() => {
-    let region = "Amercias"
-    expectancyTest = new Expectancy(region, gender, alcohol, exercise);
-  })
-
-  test('should return life expectancy based on user input for region', ()=> {
-    expect(expectancyTest.regionCal).toEqual(79)
-  })
-})
