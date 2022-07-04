@@ -4,8 +4,8 @@ describe ('Expectancy', () => {
   let expectancyTest;
   beforeEach(() => {
     let region = "Americas";
-    let gender = "male";
-    expectancyTest = new Expectancy(region);
+    let gender = "female";
+    expectancyTest = new Expectancy(region, gender);
   })
 
   test('should return life expectancy based on user input for region', ()=> {
@@ -13,7 +13,8 @@ describe ('Expectancy', () => {
   });
 
   test('should return life expectancy based on user input for gender', ()=> {
-    expect(expectancyTest.regionCal()).toEqual(79)
+    expectancyTest.regionCal();
+    expect(expectancyTest.genderCal()).toEqual(84)
   });
 
 })
