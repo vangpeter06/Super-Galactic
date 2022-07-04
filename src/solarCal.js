@@ -1,9 +1,15 @@
-export default function SolarCal(age) {
+export default class SolarCal {
+  constructor(age) {
   this.age = age;
-  
-}
+  };
 
-SolarCal.prototype.earthCal = function() {
-  let earthAge = this.age;
-  return earthAge;
-}
+  earthCal() {
+    let earthAge = this.age;
+    return earthAge;
+  };
+
+  mercuryCal() {
+    let mercuryAge = Math.round(this.age * .24)
+    return mercuryAge;
+  };
+};
