@@ -31,7 +31,16 @@ describe ('Expectancy', () => {
     expectancyTest.alcoholCal();
     expect(expectancyTest.exerciseCal()).toEqual(92)
   });
-
-
-
 })
+describe ('Expectancy', () => {
+  let expectancyTest;
+  
+  test('should return life expectancy based on user input for exercising', ()=> {
+    
+    let region = "Americas"
+    let gender = "male";
+    expectancyTest = new Expectancy(region, gender);
+  expectancyTest.regionCal();
+  expect(expectancyTest.genderCal()).toEqual(79)
+});
+});
